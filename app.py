@@ -37,4 +37,6 @@ V_titrat = 50.0       # mL
 # Asumsikan rasio mol 1:1
 M_titrat = hitung_konsentrasi_titrat(V_titran, M_titran, V_titrat)
 
-print(f"Konsentrasi titrat adalah {M_titrat:.4f} mol/L")
+import streamlit as s
+
+s.write(f"Konsentrasi titrat adalah {M_titrat:.4f} mol/L")
