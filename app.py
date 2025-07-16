@@ -87,7 +87,7 @@ s.markdown("""
     <style>
     html, body, [class*="css"]  {
         font-family: 'Poppins', sans-serif;
-        background-color: #FFF0F5;
+        background-color: #e86f98;
         color: #4A4A4A;
     }
 
