@@ -29,7 +29,7 @@ bobot_molekul_titrat_kadar = s.number_input("BE")
 faktor_pengali_kadar = s.number_input("faktor pengali")
 volume_titrat_kadar = s.number_input("volume titrat")
 
-hasil = kadar(volume_titran_kadar, konsentrasi_titran_mL_kadar, bobot_molekul_titrat_kadar, faktor_pengali_kadar, volume_titrat_kadar):
+hasil = kadar(volume_titran_kadar, konsentrasi_titran_mL_kadar, bobot_molekul_titrat_kadar, faktor_pengali_kadar, volume_titrat_kadar)
 hasil = round(hasil, 2)
 
 s.write(hasil)
