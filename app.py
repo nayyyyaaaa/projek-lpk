@@ -30,9 +30,17 @@ def hitung_konsentrasi_titrat(volume_titran_ml, molaritas_titran, volume_titrat_
 
 
 # Contoh penggunaan
-V_titran = 25.0       # mL
-M_titran = 0.1        # mol/L
-V_titrat = 50.0       # mL
+# V_titran = 25.0       # mL
+# M_titran = 0.1        # mol/L
+# V_titrat = 50.0       # mL
+
+s.write(f"Vn")
+V_titran = s.number_input();
+s.write(f"M")
+M_titran = s.number_input();
+s.write(f"Vt")
+V_titrat = s.number_input();
+
 
 # Asumsikan rasio mol 1:1
 M_titrat = hitung_konsentrasi_titrat(V_titran, M_titran, V_titrat)
