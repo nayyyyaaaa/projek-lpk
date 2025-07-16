@@ -34,17 +34,14 @@ def hitung_konsentrasi_titrat(volume_titran_ml, molaritas_titran, volume_titrat_
 # M_titran = 0.1        # mol/L
 # V_titrat = 50.0       # mL
 
-s.write(f"Vn")
-V_titran = s.number_input();
-s.write(f"M")
-M_titran = s.number_input();
-s.write(f"Vt")
-V_titrat = s.number_input();
+import streamlit as s
+
+V_titran = s.number_input("Titran= ");
+M_titran = s.number_input("M= ");
+V_titrat = s.number_input("Titrat= ");
 
 
 # Asumsikan rasio mol 1:1
 M_titrat = hitung_konsentrasi_titrat(V_titran, M_titran, V_titrat)
-
-import streamlit as s
 
 s.write(f"Konsentrasi titrat adalah {M_titrat:.4f} mol/L")
