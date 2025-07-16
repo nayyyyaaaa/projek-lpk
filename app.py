@@ -6,9 +6,9 @@ s.title("Aplikasi Perhitungan Titrasi")
 # Fungsi Perhitungan
 # ----------------------------
 
-def N(bobot_titrat_gram, faktor_pengali, volume_titran, BE):
+def N(bobot_titrat_mg, faktor_pengali, volume_titran, BE):
     if volume_titran != 0 and BE != 0:
-        return bobot_titrat_gram / (max(faktor_pengali, 1) * volume_titran * BE)
+        return bobot_titrat_mg / (max(faktor_pengali, 1) * volume_titran * BE)
     return 0.0
 
 def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
@@ -26,14 +26,14 @@ def hitung_rpd(c1, c2):
 # ----------------------------
 s.header("Perhitungan Konsentrasi")
 
-bobot_titrat_gram = s.number_input("Bobot Titrat (gram)", format="%.4f", key="bobot_titrat_gram")
+bobot_titrat_mg = s.number_input("Bobot Titrat (mg)", format="%.4f", key="bobot_titrat_mg")
 faktor_pengali = s.number_input("Faktor pengali", step=1, format="%d", key="faktor_pengali")
 volume_titran = s.number_input("Volume titran", format="%.4f", key="volume_titran")
 bobot_molekul_titrat = s.number_input("BE", format="%.4f", key="BE")
 
 hasil = 0.0
-if bobot_titrat_gram != 0 and volume_titran != 0 and bobot_molekul_titrat != 0:
-    hasil = N(bobot_titrat_gram, faktor_pengali, volume_titran, bobot_molekul_titrat)
+if bobot_titrat_mg != 0 and volume_titran != 0 and bobot_molekul_titrat != 0:
+    hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
     hasil = round(hasil, 4)
     s.success(f"Hasil Konsentrasi: {hasil} N")
 else:
