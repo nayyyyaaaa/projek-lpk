@@ -12,5 +12,6 @@ volume_titran = s.number_input("volume titran")
 bobot_molekul_titrat = s.number_input("BE")
 
 hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
+round(hasil, 4)
 
 s.write(hasil)
