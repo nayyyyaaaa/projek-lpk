@@ -10,9 +10,15 @@ volume_titran = s.number_input("Volume titran", key="volume_titran")
 bobot_molekul_titrat = s.number_input("BE", key="BE")
 
 # Hitung N dan tampilkan
-hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
-hasil = round(hasil, 4)
-s.write("Hasil N:", hasil)
+# hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
+# hasil = round(hasil, 4)
+# s.write("Hasil N:", hasil)
+
+if faktor_pengali != 0 and volume_titran != 0 and bobot_molekul_titrat != 0:
+    hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
+    s.write("Hasil N:", round(hasil,4))
+else:
+    s.write("Masukkan nilai non‑nol untuk divisor.")
 
 # Input untuk perhitungan kadar
 volume_titran_kadar = s.number_input("Volume titran (kadar)", key="vol_titran_kadar")
