@@ -38,6 +38,25 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Inject pink theme
+st.markdown(
+    """
+    <style>
+    .reportview-container, .main, .sidebar-content {
+        background-color: #ffe6f2;
+    }
+    .stButton>button {
+        background-color: #ff99cc;
+        color: white;
+        border: none;
+    }
+    .st-header, .stMarkdown {
+        color: #d6336c;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 st.title("🔬 Kalkulator Konsentrasi Titrat")
 st.write(
     "Aplikasi web untuk menghitung konsentrasi larutan titrat berdasarkan data titrasi. "
