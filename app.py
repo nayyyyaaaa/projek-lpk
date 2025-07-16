@@ -18,7 +18,7 @@ hasil = round(hasil, 4)
 
 def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
 
-  hasil = (volume_titran_kadar*konsentrasi_titran_kadar*BE_kadar*0.1*faktor_pengali_kadar*)/volume_titrat
+  hasil = (volume_titran_kadar*konsentrasi_titran_kadar*BE_kadar*0.1*faktor_pengali_kadar)/volume_titrat
   
   return hasil
 
