@@ -15,3 +15,22 @@ hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
 hasil = round(hasil, 4)
 
 s.write(hasil)
+
+def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
+
+  hasil = (volume_titran_kadar*konsentrasi_titran_kadar*BE_kadar*0.1*faktor_pengali_kadar*)/volume_titrat
+  
+  return hasil
+
+
+volume_titran_kadar = s.number_input("volume titran")
+konsentrasi_titran_mL_kadar = s.number_input("kosentrasi titrat")
+bobot_molekul_titrat_kadar = s.number_input("BE")
+faktor_pengali_kadar = s.number_input("faktor pengali")
+volume_titrat_kadar = s.number_input("volume titrat")
+
+hasil = kadar(volume_titran_kadar, konsentrasi_titran_mL_kadar, bobot_molekul_titrat_kadar, faktor_pengali_kadar, volume_titrat_kadar):
+hasil = round(hasil, 2)
+
+s.write(hasil)
+
