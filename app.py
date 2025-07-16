@@ -14,6 +14,8 @@ bobot_molekul_titrat = s.number_input("BE", key="BE")
 # hasil = round(hasil, 4)
 # s.write("Hasil N:", hasil)
 
+hasil = 0
+
 if faktor_pengali != 0 and volume_titran != 0 and bobot_molekul_titrat != 0:
     hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
     s.write("Hasil N:", round(hasil,4))
