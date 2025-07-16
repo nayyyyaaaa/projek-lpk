@@ -137,3 +137,7 @@ s.markdown("""
 s.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 """, unsafe_allow_html=True)
+s.header("🧪 Perhitungan Konsentrasi")
+s.header("💖 Perhitungan Kadar")
+s.header("✨ Perhitungan %RPD")
+s.success(f"🌟 Hasil Konsentrasi kamu: *{hasil} N* 💫")
