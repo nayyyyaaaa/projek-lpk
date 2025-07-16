@@ -2,10 +2,20 @@ import streamlit as s
 
 s.title("Aplikasi Perhitungan Titrasi")
 
-# Fungsi Konsentrasi
+# ----------------------------
+# Fungsi Perhitungan
+# ----------------------------
+
 def N(bobot_titrat, faktor_pengali, volume_titran, BE):
-    hasil = bobot_titrat / (faktor_pengali * volume_titran * BE)
-    return hasil
+    return bobot_titrat / (faktor_pengali * volume_titran * BE)
+
+def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
+    return (volume_titran_kadar * konsentrasi_titran_kadar * BE_kadar * 0.1 * faktor_pengali_kadar) / volume_titrat
+
+def hitung_rpd(c1, c2):
+    rata2 = (c1 + c2) / 2
+    rpd = abs(c1 - c2) / rata2 * 100
+    return round(rpd, 2), round(rata2, 4)
 
 # ----------------------------
 # Perhitungan Konsentrasi
@@ -17,10 +27,11 @@ faktor_pengali = s.number_input("Faktor pengali", format="%.4f", key="faktor_pen
 volume_titran = s.number_input("Volume titran", format="%.4f", key="volume_titran")
 bobot_molekul_titrat = s.number_input("BE", format="%.4f", key="BE")
 
-hasil = 0
+hasil = 0.0
 if faktor_pengali != 0 and volume_titran != 0 and bobot_molekul_titrat != 0:
     hasil = N(bobot_titrat_mg, faktor_pengali, volume_titran, bobot_molekul_titrat)
-    s.success(f"Hasil Konsentrasi: {round(hasil, 4)}")
+    hasil = round(hasil, 4)
+    s.success(f"Hasil Konsentrasi: {hasil} N")
 
 # ----------------------------
 # Perhitungan Kadar
@@ -32,10 +43,7 @@ bobot_molekul_titrat_kadar = s.number_input("BE (kadar)", format="%.4f", key="BE
 faktor_pengali_kadar = s.number_input("Faktor pengali (kadar)", format="%.4f", key="faktor_pengali_kadar")
 volume_titrat_kadar = s.number_input("Volume titrat (kadar)", format="%.4f", key="vol_titrat_kadar")
 
-def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
-    hasil = (volume_titran_kadar * konsentrasi_titran_kadar * BE_kadar * 0.1 * faktor_pengali_kadar) / volume_titrat
-    return hasil
-
+hasil2 = 0.0
 if (
     volume_titran_kadar != 0 and
     hasil != 0 and
@@ -45,9 +53,23 @@ if (
 ):
     hasil2 = kadar(
         volume_titran_kadar,
-        hasil,  # hasil dari perhitungan konsentrasi
+        hasil,  # pakai hasil konsentrasi dari atas
         bobot_molekul_titrat_kadar,
         faktor_pengali_kadar,
         volume_titrat_kadar
     )
-    s.success(f"Hasil Kadar: {round(hasil2, 2)}")
+    hasil2 = round(hasil2, 2)
+    s.success(f"Hasil Kadar: {hasil2} %")
+
+# ----------------------------
+# Perhitungan %RPD
+# ----------------------------
+s.header("Perhitungan %RPD")
+
+konsentrasi1 = s.number_input("Konsentrasi 1", format="%.4f", key="kons1")
+konsentrasi2 = s.number_input("Konsentrasi 2", format="%.4f", key="kons2")
+
+if konsentrasi1 != 0 and konsentrasi2 != 0:
+    rpd, rata_rata = hitung_rpd(konsentrasi1, konsentrasi2)
+    s.success(f"Rata-rata Konsentrasi: {rata_rata} N")
+    s.success(f"%RPD: {rpd} %")
