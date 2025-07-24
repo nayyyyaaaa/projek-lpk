@@ -1,5 +1,20 @@
 import streamlit as s
 
+# CSS agar teks dan input center
+s.markdown("""
+    <style>
+    .centered-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .centered-subtitle {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 s.title("Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi")
 
 # ----------------------------
