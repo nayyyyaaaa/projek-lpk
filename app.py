@@ -21,9 +21,7 @@ s.markdown("""
 """, unsafe_allow_html=True)
 
 # Tampilkan judul & subjudul dengan ukuran besar dan center
-s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi ∞</div>', unsafe_allow_html=True)
-
-s.markdown('<div class="centered-subtitle">Perhitungan Konsentrasi Normalitas</div>', unsafe_allow_html=True)
+s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi </div>', unsafe_allow_html=True)
 
 # ----------------------------
 # Fungsi Perhitungan
