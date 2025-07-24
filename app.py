@@ -5,7 +5,7 @@ s.markdown("""
     <style>
         .centered-title {
             text-align: center;
-            font-size: 48px;
+            font-size: 30px;
             font-weight: bold;
             color: white;
             margin-bottom: 0.5em;
