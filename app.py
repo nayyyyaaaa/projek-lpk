@@ -51,32 +51,25 @@ def hitung_rpd(c1, c2):
 # PENDAHULUAN & KETERANGAN
 # ----------------------------
 
-s.markdown("## 🧪 Pendahuluan", unsafe_allow_html=True)
+s.markdown("#### 🧪 Pendahuluan", unsafe_allow_html=True)
 s.markdown("""
 Titrasi adalah metode analisis kuantitatif yang digunakan untuk menentukan konsentrasi suatu zat dalam larutan 
 dengan mereaksikannya dengan larutan standar. Proses titrasi melibatkan penambahan larutan standar secara perlahan 
 hingga reaksi selesai, yang ditandai dengan perubahan warna indikator.
 """)
 
-s.markdown("## 📘 Rumus Titrasi", unsafe_allow_html=True)
-s.markdown("""
-*1. Normalitas (N):*  
-\\[
-N = \\frac{\\text{mg titrat}}{\\text{FP} \\times \\text{mL titran} \\times \\text{BE}}
-\\]
+s.markdown("#### 📘 Rumus Titrasi", unsafe_allow_html=True)
 
-*2. Kadar (%):*  
-\\[
-\\% \\text{Kadar} = \\frac{\\text{N} \\times \\text{mL titran} \\times \\text{BE} \\times 0{,}1 \\times FP}{\\text{Volume titrat}}
-\\]
+s.markdown("**1. Normalitas (N):**")
+s.latex(r"N = \frac{\text{mg titrat}}{\text{FP} \times \text{mL titran}\times \text{BE}}")
 
-*3. %RPD (Relative Percent Difference):*  
-\\[
-\\% RPD = \\frac{|C_1 - C_2|}{\\frac{C_1 + C_2}{2}} \\times 100
-\\]
-""", unsafe_allow_html=True)
+s.markdown("**2. Kadar*2. Kadar (%):**")
+s.latex(r"\% \text{kadar} = \frac{N \times \text{mL titran} \times \text{BE} \times 0.1 \times \text{FP}} {\text{volume titrat}}")
 
-s.markdown("## 🧬 Background Aplikasi", unsafe_allow_html=True)
+s.markdown("**3. %RPD (RElative Percent Difference):**")  
+s.latex(r"\% \text{RPD} = \frac{| \text{C}_1 - \text{C}_2|} {\left(\frac{\text{C}_1 + \text{C}_2} {2}\right)} \times 100")
+
+s.markdown("#### 🧬 Background Aplikasi", unsafe_allow_html=True)
 s.markdown("""
 Aplikasi ini dibuat untuk memudahkan praktikan kimia analitik dalam melakukan perhitungan titrasi secara cepat dan akurat. 
 Dengan adanya fitur otomatisasi perhitungan, pengguna dapat mengurangi kesalahan manusia dan mempercepat analisis hasil percobaan.
