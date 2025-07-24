@@ -32,15 +32,6 @@ s.markdown("""
     text-shadow: 1px 1px 2px #f8bbd0;
 }
 
-/* Subjudul */
-.centered-subtitle {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    color: #ab47bc;
-    margin-bottom: 1.5rem;
-}
-
 /* Section kecil */
 .cute-section-title {
     font-size: 20px;
@@ -119,10 +110,6 @@ s.markdown("""
 <!-- Icon lucu -->
 <img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
 """, unsafe_allow_html=True)
-
-# Judul utama & subjudul
-s.markdown('<div class="centered-title">🌈 Aplikasi Titrasi Imut: Normalitas, Kadar, dan %RPD</div>', unsafe_allow_html=True)
-s.markdown('<div class="centered-subtitle">🧪 Disusun oleh Kelompok 11 | Praktikum Kimia Analitik 🎀</div>', unsafe_allow_html=True)
 
 # Judul utama
 s.markdown('<div class="centered-title">Aplikasi Web Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD</div>', unsafe_allow_html=True)
