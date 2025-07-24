@@ -62,7 +62,7 @@ s.markdown("""
 
 st.markdown("""
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+        @import url('https://i.imgur.com/RIDKTzz.png');
 
         html, body, [class*="css"] {
             background-image: url('https://i.imgur.com/RIDKTzz.png');
