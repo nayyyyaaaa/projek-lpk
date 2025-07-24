@@ -35,7 +35,6 @@ s.markdown("""
 s.markdown('<p class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi ∞</p>', unsafe_allow_html=True)
 
 s.markdown('<p class="centered-subtitle">Perhitungan Konsentrasi Normalitas</p>', unsafe_allow_html=True)
-s.title("Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi")
 
 # ----------------------------
 # Fungsi Perhitungan
