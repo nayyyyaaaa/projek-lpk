@@ -1,40 +1,29 @@
 import streamlit as s
 
-# CSS styling buat center judul & subjudul
+# Tambahkan style CSS-nya
 s.markdown("""
     <style>
         .centered-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 48px;
             font-weight: bold;
             color: white;
+            margin-bottom: 0.5em;
         }
         .centered-subtitle {
             text-align: center;
-            font-size: 24px;
-            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 600;
             color: white;
+            margin-bottom: 1.5em;
         }
     </style>
 """, unsafe_allow_html=True)
-# CSS agar teks dan input center
-s.markdown("""
-    <style>
-    .centered-title {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .centered-subtitle {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 25px;
-    }
-    </style>
-""", unsafe_allow_html=True)
-s.title('<p class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi ∞</p>', unsafe_allow_html=True)
 
-s.title('<p class="centered-subtitle">Perhitungan Konsentrasi Normalitas</p>', unsafe_allow_html=True)
+# Tampilkan judul & subjudul dengan ukuran besar dan center
+s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi ∞</div>', unsafe_allow_html=True)
+
+s.markdown('<div class="centered-subtitle">Perhitungan Konsentrasi Normalitas</div>', unsafe_allow_html=True)
 
 # ----------------------------
 # Fungsi Perhitungan
