@@ -60,61 +60,6 @@ s.markdown("""
     </style>
 """, unsafe_allow_html=True) 
 
-st.markdown("""
-    <style>
-        /* 1. Import font Quicksand dari Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
-
-        /* 2. Selektor untuk container utama Streamlit */
-        [data-testid="stAppViewContainer"] {
-            background-image: url('https://i.imgur.com/YourImageID.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Quicksand', sans-serif;
-            color: #b0006d;
-        }
-
-        /* 3. Styling blok konten */
-        .block-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 25px;
-            box-shadow: 0px 0px 20px #f8bbd0;
-        }
-
-        /* 4. Judul */
-        h1, h2, h3, h4, h5, h6 {
-            color: #d81b60;
-        }
-
-        /* 5. Input dan textarea */
-        .stTextInput > div > input,
-        .stNumberInput input,
-        .stTextArea textarea {
-            background-color: #fff0f6;
-            color: #880e4f;
-            border: 1px solid #f8bbd0;
-            border-radius: 10px;
-        }
-
-        /* 6. Tombol */
-        .stButton button {
-            background-color: #f48fb1;
-            color: white;
-            font-weight: bold;
-            border-radius: 12px;
-            padding: 0.5rem 1rem;
-        }
-
-        /* 7. Markdown text */
-        .stMarkdown {
-            color: #880e4f;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
 # Tampilkan judul & subjudul dengan ukuran besar dan center
 s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi </div>', unsafe_allow_html=True)
 
