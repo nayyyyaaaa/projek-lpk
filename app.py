@@ -161,7 +161,7 @@ s.markdown("""
 Aplikasi ini dibuat untuk memudahkan praktikan kimia analitik dalam melakukan perhitungan titrasi secara cepat dan akurat. 
 Dengan adanya fitur otomatisasi perhitungan, pengguna dapat mengurangi kesalahan manusia dan mempercepat analisis hasil percobaan.
 """)
-s.markdown("#### Kalkulator titrasi", unsafe_allow_html=True)
+s.markdown("#### 🧮 Kalkulator titrasi", unsafe_allow_html=True)
 # ----------------------------
 # PERHITUNGAN KONSENTRASI
 # ----------------------------
