@@ -108,6 +108,7 @@ html, body, [data-testid="stAppViewContainer"] {
     background-color: #fde0e0 !important;
     color: #4a148c !important;
 }
+
 </style>
 """, unsafe_allow_html=True)
 </style>
