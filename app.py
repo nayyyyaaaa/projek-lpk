@@ -57,6 +57,7 @@ hingga reaksi selesai, yang ditandai dengan perubahan warna indikator.
 """)
 
 s.markdown("#### 📘 Rumus Titrasi", unsafe_allow_html=True)
+s.markdown("###### pada web aplikasi ini rumus yang diaplikasikan adalah:")
 
 s.markdown("**1. Normalitas (N):**")
 s.latex(r"N = \frac{\text{mg titrat}}{\text{FP} \times \text{mL titran}\times \text{BE}}")
@@ -65,7 +66,7 @@ s.markdown("**2. Kadar*2. Kadar (%):**")
 s.latex(r"\% \text{kadar} = \frac{N \times \text{mL titran} \times \text{BE} \times 0.1 \times \text{FP}} {\text{volume titrat}}")
 
 s.markdown("**3. %RPD (RElative Percent Difference):**")  
-s.latex(r"\% \text{RPD} = \frac{| \text{C}_1 - \text{C}_2|} {\left(\frac{\text{C}_1 + \text{C}_2} {2}\right)} \times 100")
+s.latex(r"\% \text{RPD} = \frac{| \text{N}_1 - \text{N}_2|} {\left(\frac{\text{N}_1 + \text{N}_2} {2}\right)} \times 100")
 
 s.markdown("#### 🧬 Background Aplikasi", unsafe_allow_html=True)
 s.markdown("""
