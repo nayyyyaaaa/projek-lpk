@@ -1,99 +1,111 @@
 import streamlit as s
 
-# Gaya CSS lengkap dan rapi
+import streamlit as s
+
+# Tambahkan CSS imut dan aksen kimia
 s.markdown("""
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Comic+Neue:wght@700&display=swap');
 
-        /* Background dan font utama */
-        [data-testid="stAppViewContainer"] {
-            background-image: url('https://i.imgur.com/RA2KMP9.jpeg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Quicksand', sans-serif;
-            color: #880e4f;
-        }
+/* Latar belakang dan font utama */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(to bottom, #fde0e0, #f3f1ff);
+    background-attachment: fixed;
+    font-family: 'Comic Neue', 'Quicksand', sans-serif;
+    color: #6a1b9a;
+}
 
-        /* Container konten utama */
-        .block-container {
-            background-color: #ffffffee;  /* tanpa transparansi berat */
-            padding: 2rem;
-            border-radius: 25px;
-            box-shadow: 0 0 25px #f8bbd0;
-        }
+/* Container utama */
+.block-container {
+    background-color: #ffffffcc;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #f3d1f4;
+    border: 2px dashed #ffb3c1;
+}
 
-        /* Judul dan subjudul */
-        .centered-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: #e91e63;
-            margin-top: 1rem;
-        }
-        .centered-subtitle {
-            text-align: center;
-            font-size: 24px;
-            font-weight: 600;
-            color: #f06292;
-            margin-bottom: 1.5rem;
-        }
+/* Judul dan subjudul */
+.centered-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ec407a;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px #f8bbd0;
+}
+.centered-subtitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ab47bc;
+    margin-bottom: 1.5rem;
+}
 
-        /* Input form */
-        .stTextInput > div > input,
-        .stNumberInput input,
-        .stTextArea textarea {
-            background-color: #fff0f6;
-            color: #880e4f;
-            border: 1px solid #f8bbd0;
-            border-radius: 10px;
-        }
+/* Input fields */
+.stTextInput > div > input,
+.stNumberInput input,
+.stTextArea textarea {
+    background-color: #fff5fa;
+    color: #6a1b9a;
+    border: 1.5px dashed #f48fb1;
+    border-radius: 15px;
+    font-family: 'Comic Neue', cursive;
+    padding: 0.4rem;
+}
 
-        /* Tombol */
-        .stButton button {
-            background-color: #f48fb1;
-            color: white;
-            font-weight: bold;
-            border-radius: 12px;
-            padding: 0.5rem 1rem;
-        }
+/* Tombol */
+.stButton button {
+    background-color: #f48fb1;
+    color: white;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+}
 
-        /* Scrollbar pink */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #ffeef4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #f8bbd0;
-            border-radius: 10px;
-        }
+/* Scrollbar pastel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #ffeef4;
+}
+::-webkit-scrollbar-thumb {
+    background: #f8bbd0;
+    border-radius: 10px;
+}
 
-        /* Animasi atom */
-        .animated-atom {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 120px;
-            z-index: 9999;
-            opacity: 0.9;
-        }
+/* Ikon atom lucu */
+.animated-atom {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    z-index: 9999;
+    opacity: 0.9;
+}
 
-        /* Keterangan kolom imut */
-        .footer-text {
-           font-family: 'Quicksand', cursive;
-           font-size: 0.9rem;       /* sedikit lebih kecil */
-           color: #d81b60;          /* pink tua tapi lembut */
-           font-style: italic;      /* biar terkesan cute */
-           line-height: 1.4;        /* spasi teks nyaman dibaca */
-           margin-top: 1.5rem;
-        }
-    </style>
+/* Keterangan imut */
+.footer-text {
+    font-family: 'Comic Neue', cursive;
+    font-size: 0.9rem;
+    color: #ba68c8;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: 1.5rem;
+}
+</style>
 
-    <!-- Animasi atom -->
-    <img src="https://media.tenor.com/TEatK-oRF24AAAAi/atom.gif" class="animated-atom">
+<!-- GIF atom lucu -->
+<img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
 """, unsafe_allow_html=True)
+
+# Judul utama
+s.markdown('<div class="centered-title">🌈 Aplikasi Titrasi Imut: Hitung Normalitas, Kadar, dan %RPD ✨</div>', unsafe_allow_html=True)
+
+# Subjudul kecil tambahan
+s.markdown('<div class="centered-subtitle">🧪 Kelompok 11 | Praktikum Kimia Analitik 🧁</div>', unsafe_allow_html=True)
 
 # Judul & Subjudul
 s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
