@@ -28,7 +28,7 @@ s.header("Perhitungan Konsentrasi")
 
 bobot_titrat_mg = s.number_input("Bobot Titrat (mg)", format="%.4f", key="bobot_titrat_mg")
 faktor_pengali = s.number_input("Faktor pengali", step=1, format="%d", key="faktor_pengali")
-volume_titran = s.number_input("Volume titran", format="%.4f", key="volume_titran")
+volume_titran = s.number_input("Volume titran (mL)", format="%.4f", key="volume_titran")  # Ubah label
 bobot_molekul_titrat = s.number_input("BE", format="%.4f", key="BE")
 
 hasil = 0.0
@@ -45,10 +45,10 @@ else:
 s.header("Perhitungan Kadar")
 
 konsentrasi_input = s.number_input("Konsentrasi (N)", format="%.4f", key="kons_n_manual")
-volume_titran_kadar = s.number_input("Volume titran (kadar)", format="%.4f", key="vol_titran_kadar")
+volume_titran_kadar = s.number_input("Volume titran (kadar) (mL)", format="%.4f", key="vol_titran_kadar")  # Ubah label
 bobot_molekul_titrat_kadar = s.number_input("BE (kadar)", format="%.4f", key="BE_kadar")
 faktor_pengali_kadar = s.number_input("Faktor pengali (kadar)", step=1, format="%d", key="faktor_pengali_kadar")
-volume_titrat_kadar = s.number_input("Volume titrat (kadar)", format="%.4f", key="vol_titrat_kadar")
+volume_titrat_kadar = s.number_input("Volume titrat (kadar) (mL)", format="%.4f", key="vol_titrat_kadar")  # Ubah label
 
 hasil2 = 0.0
 if (
