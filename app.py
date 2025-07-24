@@ -1,4 +1,55 @@
 import streamlit as s
+# Tambahkan style CSS-nya
+
+s.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        html, body, [class*="css"]  {
+            background-color: #ffeef8;
+            color: #d63384;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .centered-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #d63384;
+            margin-bottom: 0.5em;
+        }
+
+        .centered-subtitle {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            color: #d63384;
+            margin-bottom: 1.5em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #c2185b;
+        }
+
+        .stTextInput > div > input {
+            background-color: #fff0f6;
+            color: #880e4f;
+            border: 1px solid #f8bbd0;
+        }
+
+        .stButton button {
+            background-color: #f48fb1;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .stAlert {
+            background-color: #fce4ec;
+            color: #880e4f;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Tambahkan style CSS-nya
 s.markdown("""
