@@ -1,71 +1,11 @@
-import streamlit as s
-# Tambahkan style CSS-nya
-
-s.markdown("""
-    <style>
-        /* Gaya Umum */
-        body, .main {
-            background-color: #fff0f5; /* pink muda */
-            color: #333;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-        }
-
-        /* Judul utama */
-        .centered-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #e75480; /* pink kuat */
-            margin-bottom: 0.5em;
-        }
-
-        /* Subjudul */
-        .centered-subtitle {
-            text-align: center;
-            font-size: 26px;
-            font-weight: 600;
-            color: #ff69b4; /* hot pink */
-            margin-bottom: 1.5em;
-        }
-
-        /* Widget input */
-        .stTextInput>div>div>input {
-            background-color: #fffafc; 
-            border: 1px solid #ffb6c1;
-            color: #444;
-        }
-
-        /* Widget teks dan layout lainnya */
-        .stMarkdown, .stHeader, .stTextInput, .stSuccess, .stInfo {
-            color: #444;
-        }
-
-        /* Box hasil (success/info) */
-        .stAlert {
-            background-color: #ffe6f0;
-            border-left: 6px solid #ff69b4;
-        }
-
-        /* Scrollbar cute */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #ffeef4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ffb6c1;
-            border-radius: 10px;
-        }
-    </style>
-""", unsafe_allow_html=True) 
-
 import streamlit as st
 
+# Gaya CSS lengkap dan rapi
 st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
+        /* Background dan font utama */
         [data-testid="stAppViewContainer"] {
             background-image: url('https://i.imgur.com/RA2KMP9.jpeg');
             background-size: cover;
@@ -75,17 +15,31 @@ st.markdown("""
             color: #880e4f;
         }
 
+        /* Container konten utama */
         .block-container {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: #ffffffee;  /* tanpa transparansi berat */
             padding: 2rem;
             border-radius: 25px;
-            box-shadow: 0px 0px 20px #f8bbd0;
+            box-shadow: 0 0 25px #f8bbd0;
         }
 
-        h1, h2, h3 {
-            color: #d81b60;
+        /* Judul dan subjudul */
+        .centered-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #e91e63;
+            margin-top: 1rem;
+        }
+        .centered-subtitle {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #f06292;
+            margin-bottom: 1.5rem;
         }
 
+        /* Input form */
         .stTextInput > div > input,
         .stNumberInput input,
         .stTextArea textarea {
@@ -95,6 +49,7 @@ st.markdown("""
             border-radius: 10px;
         }
 
+        /* Tombol */
         .stButton button {
             background-color: #f48fb1;
             color: white;
@@ -103,41 +58,16 @@ st.markdown("""
             padding: 0.5rem 1rem;
         }
 
-        .stMarkdown {
-            color: #880e4f;
+        /* Scrollbar pink */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-    </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-        [data-testid="stAppViewContainer"] {
-            background-color: #ffe6ec;
+        ::-webkit-scrollbar-track {
+            background: #ffeef4;
         }
-
-        .block-container {
-            background-color: rgba(255, 255, 255, 0.92);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 0 15px #f8bbd0;
-        }
-
-        h1, h2 {
-            color: #ad1457;
-        }
-
-        .stTextInput > div > input,
-        .stNumberInput input {
-            background-color: #fff0f6;
-            border: 1px solid #f8bbd0;
-            border-radius: 8px;
-        }
-
-        .stButton button {
-            background-color: #f06292;
-            color: white;
-            font-weight: bold;
-            border-radius: 12px;
+        ::-webkit-scrollbar-thumb {
+            background: #f8bbd0;
+            border-radius: 10px;
         }
 
         /* Animasi atom */
@@ -151,11 +81,13 @@ st.markdown("""
         }
     </style>
 
+    <!-- Animasi atom -->
     <img src="https://media.tenor.com/TEatK-oRF24AAAAi/atom.gif" class="animated-atom">
 """, unsafe_allow_html=True)
 
-# Tampilkan judul & subjudul dengan ukuran besar dan center
-s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi </div>', unsafe_allow_html=True)
+# Judul & Subjudul
+st.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
+st.markdown('<div class="centered-subtitle">Kelompok 11 - Kimia Analitik</div>', unsafe_allow_html=True)
 
 # ----------------------------
 # Fungsi Perhitungan
