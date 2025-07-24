@@ -104,10 +104,6 @@ s.markdown("""
 # Judul utama
 s.markdown('<div class="centered-title">🌈 Aplikasi Web Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD ✨</div>', unsafe_allow_html=True)
 
-# Judul & Subjudul
-s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
-
-# ----------------------------
 # Fungsi Perhitungan
 # ----------------------------
 def N(bobot_titrat_mg, faktor_pengali, volume_titran, BE):
