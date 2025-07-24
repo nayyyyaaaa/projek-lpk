@@ -1,7 +1,7 @@
 import streamlit as s
 
 # Gaya CSS lengkap dan rapi
-st.markdown("""
+s.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
@@ -86,8 +86,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Judul & Subjudul
-st.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
-st.markdown('<div class="centered-subtitle">Kelompok 11 - Kimia Analitik</div>', unsafe_allow_html=True)
+s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
 
 # ----------------------------
 # Fungsi Perhitungan
