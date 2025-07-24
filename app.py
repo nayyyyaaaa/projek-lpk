@@ -6,25 +6,19 @@ s.markdown("""
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
         html, body, [class*="css"]  {
-            background-color: #ffeef8;
-            color: #d63384;
+            background-image: url("https://i.pinimg.com/originals/3a/ff/c7/3affc7c3fc734103b2dd8acbfb4e48a7.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
             font-family: 'Quicksand', sans-serif;
+            color: #d63384;
         }
 
-        .centered-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: #d63384;
-            margin-bottom: 0.5em;
-        }
-
-        .centered-subtitle {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 600;
-            color: #d63384;
-            margin-bottom: 1.5em;
+        .main, .block-container {
+            background-color: rgba(255, 240, 246, 0.9); /* Soft pink transparan */
+            padding: 2rem;
+            border-radius: 15px;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -41,71 +35,6 @@ s.markdown("""
             background-color: #f48fb1;
             color: white;
             font-weight: bold;
-            border-radius: 10px;
-        }
-
-        .stAlert {
-            background-color: #fce4ec;
-            color: #880e4f;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Tambahkan style CSS-nya
-s.markdown("""
-    <style>
-        /* Gaya Umum */
-        body, .main {
-            background-color: #fff0f5; /* pink muda */
-            color: #333;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-        }
-
-        /* Judul utama */
-        .centered-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #e75480; /* pink kuat */
-            margin-bottom: 0.5em;
-        }
-
-        /* Subjudul */
-        .centered-subtitle {
-            text-align: center;
-            font-size: 26px;
-            font-weight: 600;
-            color: #ff69b4; /* hot pink */
-            margin-bottom: 1.5em;
-        }
-
-        /* Widget input */
-        .stTextInput>div>div>input {
-            background-color: #fffafc; 
-            border: 1px solid #ffb6c1;
-            color: #444;
-        }
-
-        /* Widget teks dan layout lainnya */
-        .stMarkdown, .stHeader, .stTextInput, .stSuccess, .stInfo {
-            color: #444;
-        }
-
-        /* Box hasil (success/info) */
-        .stAlert {
-            background-color: #ffe6f0;
-            border-left: 6px solid #ff69b4;
-        }
-
-        /* Scrollbar cute */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #ffeef4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ffb6c1;
             border-radius: 10px;
         }
     </style>
