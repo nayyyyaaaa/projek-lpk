@@ -1,6 +1,6 @@
 import streamlit as s
 
-s.title("Aplikasi Perhitungan Titrasi")
+s.title("Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi")
 
 # ----------------------------
 # Fungsi Perhitungan
@@ -83,8 +83,9 @@ konsentrasi1 = s.text_input("Konsentrasi/Kadar 1", key="kons1")
 konsentrasi2 = s.text_input("Konsentrasi/Kadar 2", key="kons2")
 
 try:
-    k1 = float(konsentrasi1)
-    k2 = float(konsentrasi2)
+    # Ganti koma ke titik agar bisa dibaca sebagai sebagai float
+    k1 = float(konsentrasi1.replace(",","."))
+    k2 = float(konsentrasi2.replace(",","."))
 
     rpd, rata2, satuan, desimal = hitung_rpd(k1, k2)
 
