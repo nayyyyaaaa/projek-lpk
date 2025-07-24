@@ -148,7 +148,7 @@ except:
     if konsentrasi1 or konsentrasi2:
         s.info("⚠ Harap isi kedua nilai Konsentrasi/Kadar dengan benar untuk menghitung %RPD.")
 
-s.markdown("#### 👥 web ini  disusun oleh:", unsafe_allow_html=True)
+s.markdown("#### 👥 web ini  disusun oleh Kelompok 11 dalam project pemrograman komputer, yang beranggotakan:", unsafe_allow_html=True)
 s.markdown("""
 - Astrid Gustami Prameswari: 2460333
 - Lailatushifa: 2460406
