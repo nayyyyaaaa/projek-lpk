@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as s
 
 # Gaya CSS lengkap dan rapi
 st.markdown("""
