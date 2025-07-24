@@ -3,6 +3,65 @@ import streamlit as s
 
 s.markdown("""
     <style>
+        /* Gaya Umum */
+        body, .main {
+            background-color: #fff0f5; /* pink muda */
+            color: #333;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        /* Judul utama */
+        .centered-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #e75480; /* pink kuat */
+            margin-bottom: 0.5em;
+        }
+
+        /* Subjudul */
+        .centered-subtitle {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #ff69b4; /* hot pink */
+            margin-bottom: 1.5em;
+        }
+
+        /* Widget input */
+        .stTextInput>div>div>input {
+            background-color: #fffafc; 
+            border: 1px solid #ffb6c1;
+            color: #444;
+        }
+
+        /* Widget teks dan layout lainnya */
+        .stMarkdown, .stHeader, .stTextInput, .stSuccess, .stInfo {
+            color: #444;
+        }
+
+        /* Box hasil (success/info) */
+        .stAlert {
+            background-color: #ffe6f0;
+            border-left: 6px solid #ff69b4;
+        }
+
+        /* Scrollbar cute */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffeef4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffb6c1;
+            border-radius: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True) 
+
+s.markdown("""
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
         html, body, [class*="css"]  {
