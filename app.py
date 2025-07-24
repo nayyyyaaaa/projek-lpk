@@ -60,41 +60,49 @@ s.markdown("""
     </style>
 """, unsafe_allow_html=True) 
 
-s.markdown("""
+st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-        html, body, [class*="css"]  {
-            background-image: url("https://i.pinimg.com/originals/3a/ff/c7/3affc7c3fc734103b2dd8acbfb4e48a7.jpg");
+        html, body, [class*="css"] {
+            background-image: url('https://imgur.com/RIDKTzz');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: center;
             font-family: 'Quicksand', sans-serif;
-            color: #d63384;
+            color: #b0006d;
         }
 
         .main, .block-container {
-            background-color: rgba(255, 240, 246, 0.9); /* Soft pink transparan */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px #f8bbd0;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #c2185b;
+            color: #d81b60;
         }
 
-        .stTextInput > div > input {
+        .stTextInput > div > input,
+        .stNumberInput input,
+        .stTextArea textarea {
             background-color: #fff0f6;
             color: #880e4f;
             border: 1px solid #f8bbd0;
+            border-radius: 10px;
         }
 
         .stButton button {
             background-color: #f48fb1;
             color: white;
             font-weight: bold;
-            border-radius: 10px;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+        }
+
+        .stMarkdown {
+            color: #880e4f;
         }
     </style>
 """, unsafe_allow_html=True)
