@@ -102,10 +102,7 @@ s.markdown("""
 """, unsafe_allow_html=True)
 
 # Judul utama
-s.markdown('<div class="centered-title">🌈 Aplikasi Titrasi Imut: Hitung Normalitas, Kadar, dan %RPD ✨</div>', unsafe_allow_html=True)
-
-# Subjudul kecil tambahan
-s.markdown('<div class="centered-subtitle">🧪 Kelompok 11 | Praktikum Kimia Analitik 🧁</div>', unsafe_allow_html=True)
+s.markdown('<div class="centered-title">🌈 Aplikasi Web Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD ✨</div>', unsafe_allow_html=True)
 
 # Judul & Subjudul
 s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi</div>', unsafe_allow_html=True)
