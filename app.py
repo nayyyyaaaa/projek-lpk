@@ -47,8 +47,50 @@ def hitung_rpd(c1, c2):
     max_decimal = max(decimal_places_1, decimal_places_2)
 
     satuan = "%" if max_decimal <= 2 else "N"
-    return round(rpd, 2), round(rata2, max_decimal), satuan, max_decimal
+    return round(rpd, 2), round(rata2, max_decimal), satuan, max_decimal# ----------------------------
+# PENDAHULUAN & KETERANGAN
+# ----------------------------
 
+s.markdown("## 🧪 Pendahuluan", unsafe_allow_html=True)
+s.markdown("""
+Titrasi adalah metode analisis kuantitatif yang digunakan untuk menentukan konsentrasi suatu zat dalam larutan 
+dengan mereaksikannya dengan larutan standar. Proses titrasi melibatkan penambahan larutan standar secara perlahan 
+hingga reaksi selesai, yang ditandai dengan perubahan warna indikator.
+""")
+
+s.markdown("## 📘 Rumus Titrasi", unsafe_allow_html=True)
+s.markdown("""
+*1. Normalitas (N):*  
+\\[
+N = \\frac{\\text{mg titrat}}{\\text{FP} \\times \\text{mL titran} \\times \\text{BE}}
+\\]
+
+*2. Kadar (%):*  
+\\[
+\\% \\text{Kadar} = \\frac{\\text{N} \\times \\text{mL titran} \\times \\text{BE} \\times 0{,}1 \\times FP}{\\text{Volume titrat}}
+\\]
+
+*3. %RPD (Relative Percent Difference):*  
+\\[
+\\% RPD = \\frac{|C_1 - C_2|}{\\frac{C_1 + C_2}{2}} \\times 100
+\\]
+""", unsafe_allow_html=True)
+
+s.markdown("## 🧬 Background Aplikasi", unsafe_allow_html=True)
+s.markdown("""
+Aplikasi ini dibuat untuk memudahkan praktikan kimia analitik dalam melakukan perhitungan titrasi secara cepat dan akurat. 
+Dengan adanya fitur otomatisasi perhitungan, pengguna dapat mengurangi kesalahan manusia dan mempercepat analisis hasil percobaan.
+""")
+
+s.markdown("## 👥 Kelompok 11", unsafe_allow_html=True)
+s.markdown("""
+- Nailah Inaaya
+- [Anggota 2]
+- [Anggota 3]
+- [Anggota 4]
+
+🧪 *Praktikum Kimia Analitik - 2025*
+""")
 # ----------------------------
 # PERHITUNGAN KONSENTRASI
 # ----------------------------
