@@ -60,45 +60,41 @@ s.markdown("""
     </style>
 """, unsafe_allow_html=True) 
 
+import streamlit as st
+
 st.markdown("""
     <style>
-        /* Import Quicksand font */
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-        /* Ubah latar belakang utama */
         [data-testid="stAppViewContainer"] {
-            background-image: url('https://pin.it/wjnc8dyBk');
+            background-image: url('https://i.imgur.com/RA2KMP9.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Quicksand', sans-serif;
-            color: #b0006d;
+            color: #880e4f;
         }
 
-        /* Blok konten - tidak transparan */
         .block-container {
-            background-color: #fff0f6;
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 2rem;
             border-radius: 25px;
             box-shadow: 0px 0px 20px #f8bbd0;
         }
 
-        /* Judul warna pink tua */
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3 {
             color: #d81b60;
         }
 
-        /* Inputan */
         .stTextInput > div > input,
         .stNumberInput input,
         .stTextArea textarea {
-            background-color: #ffe6ef;
+            background-color: #fff0f6;
             color: #880e4f;
             border: 1px solid #f8bbd0;
             border-radius: 10px;
         }
 
-        /* Tombol */
         .stButton button {
             background-color: #f48fb1;
             color: white;
@@ -107,7 +103,6 @@ st.markdown("""
             padding: 0.5rem 1rem;
         }
 
-        /* Markdown warna */
         .stMarkdown {
             color: #880e4f;
         }
