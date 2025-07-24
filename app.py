@@ -73,15 +73,6 @@ Aplikasi ini dibuat untuk memudahkan praktikan kimia analitik dalam melakukan pe
 Dengan adanya fitur otomatisasi perhitungan, pengguna dapat mengurangi kesalahan manusia dan mempercepat analisis hasil percobaan.
 """)
 
-s.markdown("## 👥 Kelompok 11", unsafe_allow_html=True)
-s.markdown("""
-- Nailah Inaaya
-- [Anggota 2]
-- [Anggota 3]
-- [Anggota 4]
-
-🧪 *Praktikum Kimia Analitik - 2025*
-""")
 # ----------------------------
 # PERHITUNGAN KONSENTRASI
 # ----------------------------
@@ -156,4 +147,12 @@ try:
 except:
     if konsentrasi1 or konsentrasi2:
         s.info("⚠ Harap isi kedua nilai Konsentrasi/Kadar dengan benar untuk menghitung %RPD.")
-        
+
+s.markdown("#### 👥 web ini  disusun oleh:", unsafe_allow_html=True)
+s.markdown("""
+- Astrid Gustami Prameswari: 2460333
+- Lailatushifa: 2460406
+- Nailah Inaaya Iswadi: 2460455
+- Rezhika Nur Maryam: 2460496
+- Zhalva Chantika Kumala Putri: 2460547
+
