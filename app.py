@@ -1,7 +1,5 @@
 import streamlit as s
 
-import streamlit as s
-
 # CSS & Gaya Imut Kimia
 s.markdown("""
 <style>
@@ -105,6 +103,13 @@ s.markdown("""
     line-height: 1.4;
     margin-top: 1.5rem;
 }
+
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #fde0e0 !important;
+    color: #4a148c !important;
+}
+</style>
+""", unsafe_allow_html=True)
 </style>
 
 <!-- Icon lucu -->
