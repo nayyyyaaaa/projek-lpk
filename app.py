@@ -65,7 +65,7 @@ st.markdown("""
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
         html, body, [class*="css"] {
-            background-image: url('https://imgur.com/RIDKTzz');
+            background-image: url('https://imgur.com/a/TuSNeL0');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
