@@ -1,5 +1,22 @@
 import streamlit as s
 
+# CSS styling buat center judul & subjudul
+s.markdown("""
+    <style>
+        .centered-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+        .centered-subtitle {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: white;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # CSS agar teks dan input center
 s.markdown("""
     <style>
