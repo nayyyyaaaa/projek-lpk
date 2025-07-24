@@ -67,7 +67,7 @@ st.markdown("""
 
         /* Ubah latar belakang utama */
         [data-testid="stAppViewContainer"] {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/54/Pink_atom_cartoon.jpg');
+            background-image: url('https://pin.it/wjnc8dyBk');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
