@@ -109,6 +109,51 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+        [data-testid="stAppViewContainer"] {
+            background-color: #ffe6ec;
+        }
+
+        .block-container {
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 0 15px #f8bbd0;
+        }
+
+        h1, h2 {
+            color: #ad1457;
+        }
+
+        .stTextInput > div > input,
+        .stNumberInput input {
+            background-color: #fff0f6;
+            border: 1px solid #f8bbd0;
+            border-radius: 8px;
+        }
+
+        .stButton button {
+            background-color: #f06292;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        /* Animasi atom */
+        .animated-atom {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            z-index: 9999;
+            opacity: 0.9;
+        }
+    </style>
+
+    <img src="https://media.tenor.com/TEatK-oRF24AAAAi/atom.gif" class="animated-atom">
+""", unsafe_allow_html=True)
+
 # Tampilkan judul & subjudul dengan ukuran besar dan center
 s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi </div>', unsafe_allow_html=True)
 
