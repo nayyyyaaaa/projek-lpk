@@ -157,7 +157,7 @@ Dengan adanya fitur otomatisasi perhitungan, pengguna dapat mengurangi kesalahan
 # ----------------------------
 # PERHITUNGAN KONSENTRASI
 # ----------------------------
-s.header("Perhitungan Konsentrasi Normalitas")
+s.markdown('<div class="cute-section-title">🧫 Perhitungan Konsentrasi Normalitas</div>', unsafe_allow_html=True)
 
 bobot_titrat_mg = s.text_input("Bobot Titrat (mg)", key="bobot_titrat_mg")
 faktor_pengali = s.text_input("Faktor pengali", key="faktor_pengali")
@@ -181,7 +181,7 @@ except:
 # ----------------------------
 # PERHITUNGAN KADAR
 # ----------------------------
-s.header("Perhitungan Kadar")
+s.markdown('<div class="cute-section-title">🍭 Perhitungan Kadar</div>', unsafe_allow_html=True)
 
 konsentrasi_input = s.text_input("Konsentrasi (N)", key="kons_n_manual")
 volume_titran_kadar = s.text_input("Volume titran (mL)", key="vol_titran_kadar")
@@ -207,7 +207,7 @@ except:
 # ----------------------------
 # PERHITUNGAN %RPD
 # ----------------------------
-s.header("Perhitungan %RPD")
+s.markdown('<div class="cute-section-title">🔬 Perhitungan %RPD</div>', unsafe_allow_html=True)
 
 konsentrasi1 = s.text_input("Konsentrasi/Kadar 1", key="kons1")
 konsentrasi2 = s.text_input("Konsentrasi/Kadar 2", key="kons2")
