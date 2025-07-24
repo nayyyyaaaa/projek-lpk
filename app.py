@@ -38,10 +38,10 @@ bobot_molekul_titrat = s.text_input("BE/BM", key="BE")
 
 try:
      # Ganti koma ke titik agar bisa dibaca sebagai sebagai float
-    bt = float(bobot_titrat_mg(",","."))
-    fp = float(faktor_pengali(",",".")) if faktor_pengali else 1
-    vt = float(volume_titran(",","."))
-    be = float(bobot_molekul_titrat(",","."))
+    bt = float(bobot_titrat_mg.replace(",","."))
+    fp = float(faktor_pengali.replace(",",".")) if faktor_pengali else 1
+    vt = float(volume_titran.replace(",","."))
+    be = float(bobot_molekul_titrat.replace(",","."))
 
     if vt != 0 and be != 0:
         hasil = N(bt, fp, vt, be)
@@ -63,11 +63,11 @@ volume_titrat_kadar = s.text_input("Volume titrat (mL)", key="vol_titrat_kadar")
 
 try:
      # Ganti koma ke titik agar bisa dibaca sebagai sebagai float
-    kon = float(konsentrasi_input(",","."))
-    vt_kadar = float(volume_titran_kadar(",","."))
-    be_kadar = float(bobot_molekul_titrat_kadar(",","."))
-    fp_kadar = float(faktor_pengali_kadar(",",".")) if faktor_pengali_kadar else 1
-    v_titrat = float(volume_titrat_kadar(",","."))
+    kon = float(konsentrasi_input.replace(",","."))
+    vt_kadar = float(volume_titran_kadar.replace(",","."))
+    be_kadar = float(bobot_molekul_titrat_kadar.replace(",","."))
+    fp_kadar = float(faktor_pengali_kadar.replace(",",".")) if faktor_pengali_kadar else 1
+    v_titrat = float(volume_titrat_kadar.replace(",","."))
 
     if kon != 0 and vt_kadar != 0 and be_kadar != 0 and v_titrat != 0:
         hasil2 = kadar(vt_kadar, kon, be_kadar, fp_kadar, v_titrat)
