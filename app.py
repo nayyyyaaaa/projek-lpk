@@ -103,12 +103,6 @@ s.markdown("""
     line-height: 1.4;
     margin-top: 1.5rem;
 }
-
-html, body, [data-testid="stAppViewContainer"] {
-    background-color: #fde0e0 !important;
-    color: #4a148c !important;
-}
-
 </style>
 """, unsafe_allow_html=True)
 </style>
@@ -252,4 +246,4 @@ s.markdown("""
 - Nailah Inaaya Iswadi: 2460455
 - Rezhika Nur Maryam: 2460496
 - Zhalva Chantika Kumala Putri: 2460547
-""", unsafe_allow_html=True)
+""")
