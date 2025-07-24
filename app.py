@@ -1,6 +1,6 @@
 import streamlit as s
 
-s.title("Aplikasi Perhitungan Titrasi")
+s.title("Aplikasi Perhitungan Konsentrasi Normalitas, %kadar, dan %RPD Titrasi")
 
 # ----------------------------
 # Fungsi Perhitungan
