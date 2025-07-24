@@ -79,6 +79,16 @@ s.markdown("""
             z-index: 9999;
             opacity: 0.9;
         }
+
+        /* Keterangan kolom imut */
+        .footer-text {
+           font-family: 'Quicksand', cursive;
+           font-size: 0.9rem;       /* sedikit lebih kecil */
+           color: #d81b60;          /* pink tua tapi lembut */
+           font-style: italic;      /* biar terkesan cute */
+           line-height: 1.4;        /* spasi teks nyaman dibaca */
+           margin-top: 1.5rem;
+        }
     </style>
 
     <!-- Animasi atom -->
