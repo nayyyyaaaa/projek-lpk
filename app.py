@@ -60,6 +60,60 @@ s.markdown("""
     </style>
 """, unsafe_allow_html=True) 
 
+st.markdown("""
+    <style>
+        /* Import Quicksand font */
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        /* Ubah latar belakang utama */
+        [data-testid="stAppViewContainer"] {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/54/Pink_atom_cartoon.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Quicksand', sans-serif;
+            color: #b0006d;
+        }
+
+        /* Blok konten - tidak transparan */
+        .block-container {
+            background-color: #fff0f6;
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px #f8bbd0;
+        }
+
+        /* Judul warna pink tua */
+        h1, h2, h3, h4, h5, h6 {
+            color: #d81b60;
+        }
+
+        /* Inputan */
+        .stTextInput > div > input,
+        .stNumberInput input,
+        .stTextArea textarea {
+            background-color: #ffe6ef;
+            color: #880e4f;
+            border: 1px solid #f8bbd0;
+            border-radius: 10px;
+        }
+
+        /* Tombol */
+        .stButton button {
+            background-color: #f48fb1;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Markdown warna */
+        .stMarkdown {
+            color: #880e4f;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Tampilkan judul & subjudul dengan ukuran besar dan center
 s.markdown('<div class="centered-title">Aplikasi Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD pada Titrasi </div>', unsafe_allow_html=True)
 
