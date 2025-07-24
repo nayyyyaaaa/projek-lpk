@@ -1,54 +1,78 @@
 import streamlit as s
 
-# ----------------------------
-# Fungsi perhitungan konsentrasi/kadar
-# ----------------------------
-def hitung_kadar(volume_titran, normalitas, berat_sample):
-    try:
-        volume = float(volume_titran.replace(",", "."))
-        normal = float(normalitas.replace(",", "."))
-        berat = float(berat_sample.replace(",", "."))
-        hasil = (volume * normal * 0.1) / berat
-        return hasil
-    except:
-        return None
+s.title("Aplikasi Perhitungan Titrasi")
 
 # ----------------------------
-# Fungsi perhitungan %RPD
+# Fungsi Perhitungan
 # ----------------------------
-def hitung_rpd(k1, k2):
-    rata2 = (k1 + k2) / 2
-    rpd = abs(k1 - k2) / rata2 * 100
+def N(bobot_titrat_mg, faktor_pengali, volume_titran, BE):
+    if volume_titran != 0 and BE != 0:
+        return bobot_titrat_mg / (max(faktor_pengali, 1) * volume_titran * BE)
+    return 0.0
 
-    # Penentuan satuan otomatis
-    satuan = "%"
-    desimal = 2
-    if rata2 < 1:
-        satuan = "N"  # Normalitas
-        desimal = 4
+def kadar(volume_titran_kadar, konsentrasi_titran_kadar, BE_kadar, faktor_pengali_kadar, volume_titrat):
+    if volume_titrat != 0:
+        return (volume_titran_kadar * konsentrasi_titran_kadar * BE_kadar * 0.1 * max(faktor_pengali_kadar, 1)) / volume_titrat
+    return 0.0
 
-    return rpd, rata2, satuan, desimal
+def hitung_rpd(c1, c2):
+    rata2 = (c1 + c2) / 2
+    rpd = abs(c1 - c2) / rata2 * 100
+
+    decimal_places_1 = len(str(c1).split(".")[-1]) if "." in str(c1) else 0
+    decimal_places_2 = len(str(c2).split(".")[-1]) if "." in str(c2) else 0
+    max_decimal = max(decimal_places_1, decimal_places_2)
+
+    satuan = "%" if max_decimal <= 2 else "N"
+    return round(rpd, 2), round(rata2, max_decimal), satuan, max_decimal
 
 # ----------------------------
-# Tampilan judul utama
+# PERHITUNGAN KONSENTRASI
 # ----------------------------
-s.title("Perhitungan Konsentrasi dan %RPD")
+s.header("Perhitungan Konsentrasi Normalitas")
+
+bobot_titrat_mg = s.text_input("Bobot Titrat (mg)", key="bobot_titrat_mg")
+faktor_pengali = s.text_input("Faktor pengali", key="faktor_pengali")
+volume_titran = s.text_input("Volume titran (mL)", key="volume_titran")
+bobot_molekul_titrat = s.text_input("BE/BM", key="BE")
+
+try:
+    bt = float(bobot_titrat_mg)
+    fp = float(faktor_pengali) if faktor_pengali else 1
+    vt = float(volume_titran)
+    be = float(bobot_molekul_titrat)
+
+    if vt != 0 and be != 0:
+        hasil = N(bt, fp, vt, be)
+        s.success(f"Hasil Konsentrasi: {hasil:.4f} N")
+except:
+    if bobot_titrat_mg or volume_titran or bobot_molekul_titrat:
+        s.info("⚠ Mohon isi semua input dengan benar untuk menghitung Normalitas.")
 
 # ----------------------------
-# PERHITUNGAN KONSENTRASI / KADAR
+# PERHITUNGAN KADAR
 # ----------------------------
-s.header("Perhitungan Konsentrasi / Kadar")
+s.header("Perhitungan Kadar")
 
-volume_titran = s.text_input("Volume titran (mL)")
-normalitas = s.text_input("Normalitas titran (N)")
-berat_sample = s.text_input("Berat sampel (gram)")
+konsentrasi_input = s.text_input("Konsentrasi (N)", key="kons_n_manual")
+volume_titran_kadar = s.text_input("Volume titran (mL)", key="vol_titran_kadar")
+bobot_molekul_titrat_kadar = s.text_input("BE/BM", key="BE_kadar")
+faktor_pengali_kadar = s.text_input("Faktor pengali", key="faktor_pengali_kadar")
+volume_titrat_kadar = s.text_input("Volume titrat (mL)", key="vol_titrat_kadar")
 
-hasil_kadar = hitung_kadar(volume_titran, normalitas, berat_sample)
+try:
+    kon = float(konsentrasi_input)
+    vt_kadar = float(volume_titran_kadar)
+    be_kadar = float(bobot_molekul_titrat_kadar)
+    fp_kadar = float(faktor_pengali_kadar) if faktor_pengali_kadar else 1
+    v_titrat = float(volume_titrat_kadar)
 
-if hasil_kadar is not None:
-    s.success(f"Hasil perhitungan konsentrasi/kadar: {hasil_kadar:.4f} %")
-elif volume_titran or normalitas or berat_sample:
-    s.warning("⚠ Harap isi semua data dengan format angka yang benar.")
+    if kon != 0 and vt_kadar != 0 and be_kadar != 0 and v_titrat != 0:
+        hasil2 = kadar(vt_kadar, kon, be_kadar, fp_kadar, v_titrat)
+        s.success(f"Hasil Kadar: {hasil2:.2f} %")
+except:
+    if konsentrasi_input or volume_titran_kadar or bobot_molekul_titrat_kadar or volume_titrat_kadar:
+        s.info("⚠ Mohon isi semua input dengan benar untuk menghitung Kadar.")
 
 # ----------------------------
 # PERHITUNGAN %RPD
@@ -59,9 +83,8 @@ konsentrasi1 = s.text_input("Konsentrasi/Kadar 1", key="kons1")
 konsentrasi2 = s.text_input("Konsentrasi/Kadar 2", key="kons2")
 
 try:
-    # Terima koma atau titik
-    k1 = float(konsentrasi1.replace(",", "."))
-    k2 = float(konsentrasi2.replace(",", "."))
+    k1 = float(konsentrasi1)
+    k2 = float(konsentrasi2)
 
     rpd, rata2, satuan, desimal = hitung_rpd(k1, k2)
 
@@ -71,7 +94,7 @@ try:
         s.success(f"Rata-rata Konsentrasi: {format(rata2, '.4f')} N")
 
     s.success(f"%RPD: {rpd:.2f} %")
-
 except:
     if konsentrasi1 or konsentrasi2:
         s.info("⚠ Harap isi kedua nilai Konsentrasi/Kadar dengan benar untuk menghitung %RPD.")
+        
