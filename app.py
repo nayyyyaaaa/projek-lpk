@@ -1,7 +1,5 @@
 import streamlit as s
 
-import streamlit as s
-
 # Tambahkan CSS imut dan aksen kimia
 s.markdown("""
 <style>
@@ -39,6 +37,21 @@ s.markdown("""
     font-weight: 600;
     color: #ab47bc;
     margin-bottom: 1.5rem;
+}
+
+/* Judul bagian perhitungan */
+.cute-section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #7b1fa2;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Comic Neue', cursive;
+    background-color: #fce4ec;
+    padding: 0.5rem 1rem;
+    border-left: 5px solid #f48fb1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #f8bbd07e;
 }
 
 /* Input fields */
