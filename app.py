@@ -3,7 +3,7 @@ import base64
 
 # Fungsi encode gambar lokal ke base64
 def get_base64(file_path):
-    with open(file_path, "rb") as f:
+    with open(file_path, "r") as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
