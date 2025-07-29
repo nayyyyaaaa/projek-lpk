@@ -1,4 +1,45 @@
 import streamlit as s
+import base64
+
+# Fungsi untuk encode gambar lokal ke base64
+def get_base64(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Path ke gambarmu
+bg_path = r"/mnt/data/lpk coyy.jpg"
+bg_base64 = get_base64(lpk coyy.jpg)
+
+# Inject CSS
+s.markdown(f"""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
+
+    [data-testid="stAppViewContainer"] {{
+        /* ganti gradient lama dengan gambar base64: */
+        background-image: url("data:image/jpeg;base64,{bg_base64}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        font-family: 'Comic Neue', 'Quicksand', cursive;
+        color: #6a1b9a;
+    }}
+
+    /* …CSS lain tidak berubah… */
+
+    .animated-atom {{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 100px;
+        z-index: 9999;
+        opacity: 0.9;
+    }}
+    </style>
+""", unsafe_allow_html=True)
+
 
 # CSS & Gaya Imut Kimia
 s.markdown("""
