@@ -23,12 +23,12 @@ s.markdown(f"""
 
 .block-container {{
     background-image: url("data:image/jpg;base64,{bg_image}");
-    background-size: 1080 x 1920 ;
+    background-size: 2080 x 2920 ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     padding: 2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     box-shadow: 0 0 20px #f3d1f4;
     border: 2px dashed #f48fb1;
 }}
