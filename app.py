@@ -8,7 +8,7 @@ def get_base64(file_path):
     return base64.b64encode(data).decode()
 
 # Ganti path ini sesuai lokasi file di komputermu
-bg_image_base64 = get_base64(r"C:\Users\naila\OneDrive\Documents\NUGAS WELL\project lpk.jpg")
+bg_image_base64 = get_base64(r"C:\Users\naila\OneDrive\Documents\NUGAS WELL\project lpk\backgroundkimia.jpg")
 
 # Masukkan CSS dengan background base64
 s.markdown(f"""
