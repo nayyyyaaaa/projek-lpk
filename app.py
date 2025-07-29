@@ -38,7 +38,7 @@ s.markdown(f"""
     text-align: center;
     font-size: 34px;
     font-weight: bold;
-    color: #ec407a;
+    color: #b00c43;
     margin-top: 1rem;
     text-shadow: 1px 1px 2px #f8bbd0;
 }}
