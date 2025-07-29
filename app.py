@@ -27,6 +27,10 @@ s.markdown(f"""
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    
+    background-color: rgba(255, 255, 255, 0.7); /* transparan putih */
+    backdrop-filter: blur(6px); /* blur lembut */
+
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 0 20px #f3d1f4;
