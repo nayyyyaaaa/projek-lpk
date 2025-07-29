@@ -1,37 +1,50 @@
 import streamlit as s
+import base64
+
+def get_base64(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# ubah sesuai nama file gambarmu
+bg_image = get_base64("E:/syifakuliah/coding/coba/backgroundkimia.jpg")
 
 # CSS & Gaya Imut Kimia
-s.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
+s.markdown(f"""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
 
-[data-testid="stAppViewContainer"] {
+    html, body, .stApp {{
     background: linear-gradient(to bottom right, #fce4ec, #e1f5fe);
     font-family: 'Comic Neue', 'Quicksand', cursive;
     color: #6a1b9a;
     background-attachment: fixed;
-}
+    }}
 
-.block-container {
-    background-color: #ffffffdd;
+.block-container {{
+    background-image: url("data:image/jpg;base64,{bg_image}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 0 20px #f3d1f4;
     border: 2px dashed #f48fb1;
-}
+}}
 
 /* Judul utama */
-.centered-title {
+.centered-title {{
     text-align: center;
     font-size: 34px;
     font-weight: bold;
     color: #ec407a;
     margin-top: 1rem;
     text-shadow: 1px 1px 2px #f8bbd0;
-}
+}}
 
 /* Section kecil */
-.cute-section-title {
+.cute-section-title {{
     font-size: 20px;
     font-weight: 600;
     color: #7b1fa2;
@@ -43,22 +56,22 @@ s.markdown("""
     border-left: 5px solid #f48fb1;
     border-radius: 10px;
     box-shadow: 0 2px 4px #f8bbd07e;
-}
+}}
 
 /* Input */
 .stTextInput > div > input,
 .stNumberInput input,
-.stTextArea textarea {
+.stTextArea textarea {{
     background-color: #fff5fa;
     color: #6a1b9a;
     border: 2px dashed #f48fb1;
     border-radius: 15px;
     font-family: 'Comic Neue', cursive;
     padding: 0.4rem;
-}
+}}
 
 /* Tombol */
-.stButton button {
+.stButton button {{
     background-color: #f48fb1;
     color: white;
     font-weight: bold;
@@ -67,42 +80,42 @@ s.markdown("""
     padding: 0.5rem 1rem;
     box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
     transition: all 0.3s ease;
-}
-.stButton button:hover {
+}}
+.stButton button:hover {{
     background-color: #ec407a;
-}
+}}
 
 /* Scrollbar pastel */
-::-webkit-scrollbar {
+::-webkit-scrollbar {{
     width: 8px;
-}
-::-webkit-scrollbar-track {
+}}
+::-webkit-scrollbar-track {{
     background: #ffeef4;
-}
-::-webkit-scrollbar-thumb {
+}}
+::-webkit-scrollbar-thumb {{
     background: #f8bbd0;
     border-radius: 10px;
-}
+}}
 
 /* Atom animasi */
-.animated-atom {
+.animated-atom {{
     position: fixed;
     top: 15px;
     right: 15px;
     width: 100px;
     z-index: 9999;
     opacity: 0.9;
-}
+}}
 
 /* Footer */
-.footer-text {
+.footer-text {{
     font-family: 'Comic Neue', cursive;
     font-size: 0.9rem;
     color: #ba68c8;
     font-style: italic;
     line-height: 1.4;
     margin-top: 1.5rem;
-}
+}}
 </style>
 
 <!-- Icon lucu -->
@@ -147,13 +160,13 @@ hingga reaksi selesai, yang ditandai dengan perubahan warna indikator.
 s.markdown("#### 📘 Rumus Titrasi", unsafe_allow_html=True)
 s.markdown("###### pada web aplikasi ini rumus yang diaplikasikan adalah:")
 
-s.markdown("*1. Normalitas (N):*")
+s.markdown("1. Normalitas (N):")
 s.latex(r"N = \frac{\text{mg titrat}}{\text{FP} \times \text{mL titran}\times \text{BE}}")
 
-s.markdown("*2. Kadar (%):*")
+s.markdown("2. Kadar (%):")
 s.latex(r"\% \text{kadar} = \frac{N \times \text{mL titran} \times \text{BE} \times 0.1 \times \text{FP}} {\text{volume titrat}}")
 
-s.markdown("*3. %RPD (Relative Percent Difference):*")  
+s.markdown("3. %RPD (Relative Percent Difference):")  
 s.latex(r"\% \text{RPD} = \frac{| \text{N}_1 - \text{N}_2|} {\left(\frac{\text{N}_1 + \text{N}_2} {2}\right)} \times 100")
 
 s.markdown("#### 🧬 Background Aplikasi", unsafe_allow_html=True)
