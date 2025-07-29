@@ -1,113 +1,119 @@
 import streamlit as s
+import base64
 
-# CSS & Gaya Imut Kimia
-s.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
+# Fungsi encode gambar lokal ke base64
+def get_base64(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(to bottom right, #fce4ec, #e1f5fe);
-    font-family: 'Comic Neue', 'Quicksand', cursive;
-    color: #6a1b9a;
-    background-attachment: fixed;
-}
+# Ganti path ini sesuai lokasi file di komputermu
+bg_image_base64 = get_base64("C:\Users\naila\OneDrive\Documents\NUGAS WELL\project lpk.jpg")
 
-.block-container {
-    background-color: #ffffffdd;
-    padding: 2rem;
-    border-radius: 25px;
-    box-shadow: 0 0 20px #f3d1f4;
-    border: 2px dashed #f48fb1;
-}
+# Masukkan CSS dengan background base64
+s.markdown(f"""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
 
-/* Judul utama */
-.centered-title {
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
-    color: #ec407a;
-    margin-top: 1rem;
-    text-shadow: 1px 1px 2px #f8bbd0;
-}
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/jpg;base64,{bg_image_base64}");
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Comic Neue', 'Quicksand', cursive;
+        color: #6a1b9a;
+    }}
 
-/* Section kecil */
-.cute-section-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #7b1fa2;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Comic Neue', cursive;
-    background-color: #fce4ec;
-    padding: 0.5rem 1rem;
-    border-left: 5px solid #f48fb1;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px #f8bbd07e;
-}
+    .block-container {{
+        background-color: #ffffffdd;
+        padding: 2rem;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #f3d1f4;
+        border: 2px dashed #f48fb1;
+    }}
 
-/* Input */
-.stTextInput > div > input,
-.stNumberInput input,
-.stTextArea textarea {
-    background-color: #fff5fa;
-    color: #6a1b9a;
-    border: 2px dashed #f48fb1;
-    border-radius: 15px;
-    font-family: 'Comic Neue', cursive;
-    padding: 0.4rem;
-}
+    .centered-title {{
+        text-align: center;
+        font-size: 34px;
+        font-weight: bold;
+        color: #ec407a;
+        margin-top: 1rem;
+        text-shadow: 1px 1px 2px #f8bbd0;
+    }}
 
-/* Tombol */
-.stButton button {
-    background-color: #f48fb1;
-    color: white;
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
-    transition: all 0.3s ease;
-}
-.stButton button:hover {
-    background-color: #ec407a;
-}
+    .cute-section-title {{
+        font-size: 20px;
+        font-weight: 600;
+        color: #7b1fa2;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: 'Comic Neue', cursive;
+        background-color: #fce4ec;
+        padding: 0.5rem 1rem;
+        border-left: 5px solid #f48fb1;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px #f8bbd07e;
+    }}
 
-/* Scrollbar pastel */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #ffeef4;
-}
-::-webkit-scrollbar-thumb {
-    background: #f8bbd0;
-    border-radius: 10px;
-}
+    .stTextInput > div > input,
+    .stNumberInput input,
+    .stTextArea textarea {{
+        background-color: #fff5fa;
+        color: #6a1b9a;
+        border: 2px dashed #f48fb1;
+        border-radius: 15px;
+        font-family: 'Comic Neue', cursive;
+        padding: 0.4rem;
+    }}
 
-/* Atom animasi */
-.animated-atom {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    width: 100px;
-    z-index: 9999;
-    opacity: 0.9;
-}
+    .stButton button {{
+        background-color: #f48fb1;
+        color: white;
+        font-weight: bold;
+        font-family: 'Quicksand', sans-serif;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+        transition: all 0.3s ease;
+    }}
 
-/* Footer */
-.footer-text {
-    font-family: 'Comic Neue', cursive;
-    font-size: 0.9rem;
-    color: #ba68c8;
-    font-style: italic;
-    line-height: 1.4;
-    margin-top: 1.5rem;
-}
-</style>
+    .stButton button:hover {{
+        background-color: #ec407a;
+    }}
 
-<!-- Icon lucu -->
-<img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
+    ::-webkit-scrollbar {{
+        width: 8px;
+    }}
+    ::-webkit-scrollbar-track {{
+        background: #ffeef4;
+    }}
+    ::-webkit-scrollbar-thumb {{
+        background: #f8bbd0;
+        border-radius: 10px;
+    }}
+
+    .animated-atom {{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 100px;
+        z-index: 9999;
+        opacity: 0.9;
+    }}
+
+    .footer-text {{
+        font-family: 'Comic Neue', cursive;
+        font-size: 0.9rem;
+        color: #ba68c8;
+        font-style: italic;
+        line-height: 1.4;
+        margin-top: 1.5rem;
+    }}
+    </style>
+
+    <!-- Icon lucu -->
+    <img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
 """, unsafe_allow_html=True)
+
 
 # Judul utama
 s.markdown('<div class="centered-title">Aplikasi Web Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD</div>', unsafe_allow_html=True)
