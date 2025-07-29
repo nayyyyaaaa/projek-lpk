@@ -9,7 +9,7 @@ def get_base64(file_path):
 
 # Path ke gambarmu
 bg_path = r"/mnt/data/lpk coyy.jpg"
-bg_base64 = get_base64(lpk coyy.jpg)
+bg_base64 = get_base64("lpk coyy.jpg")
 
 # Inject CSS
 s.markdown(f"""
