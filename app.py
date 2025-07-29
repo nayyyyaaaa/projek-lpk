@@ -27,10 +27,6 @@ s.markdown(f"""
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    
-    background-color: rgba(255, 255, 255, 0.7); /* transparan putih */
-    backdrop-filter: blur(6px); /* blur lembut */
-
     padding: 2rem;
     border-radius: 25px;
     box-shadow: 0 0 20px #f3d1f4;
@@ -42,7 +38,7 @@ s.markdown(f"""
     text-align: center;
     font-size: 34px;
     font-weight: bold;
-    color: #b00c43;
+    color: #ec407a;
     margin-top: 1rem;
     text-shadow: 1px 1px 2px #f8bbd0;
 }}
@@ -51,15 +47,15 @@ s.markdown(f"""
 .cute-section-title {{
     font-size: 20px;
     font-weight: 600;
-    color: #913975;
+    color: #7b1fa2;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Comic Neue', cursive;
-    background-color: #d9b8ce;
+    background-color: #fce4ec;
     padding: 0.5rem 1rem;
-    border-left: 5px solid #913975;
+    border-left: 5px solid #f48fb1;
     border-radius: 10px;
-    box-shadow: 0 2px 4px #913975;
+    box-shadow: 0 2px 4px #f8bbd07e;
 }}
 
 /* Input */
