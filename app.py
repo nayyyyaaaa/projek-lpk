@@ -7,7 +7,7 @@ def get_base64(file_path):
     return base64.b64encode(data).decode()
 
 # ubah sesuai nama file gambarmu
-bg_image = get_base64("E:/syifakuliah/coding/coba/backgroundkimia.jpg")
+bg_image = get_base64("C:\Users\naila\OneDrive\Documents\NUGAS WELL\project lpk")
 
 # CSS & Gaya Imut Kimia
 s.markdown(f"""
