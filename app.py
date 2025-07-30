@@ -68,16 +68,21 @@ s.markdown(f"""
     opacity: 1;
 
 }}
+# RUMUS
+s.markdown('<div class="rumus-title">1. Normalitas/Molaritas (N/M):</div>', unsafe_allow_html=True)
+s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
+s.latex(r"N/M = \frac{\text{bobot titrat(mg)}}{\text{FP} \times \text{volume titran(mL)} \times \text{BE/BM}}")
+s.markdown('</div>', unsafe_allow_html=True)
 
-.rumus-title 
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 1rem;
-    color: #590111;
-}}
+s.markdown('<div class="rumus-title">2. Kadar (%):</div>', unsafe_allow_html=True)
+s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
+s.latex(r"\% \text{kadar} = \frac{N/M \times \text{volume titran} \times \text{BE/BM} \times 0.1 \times \text{FP}}{\text{volume titrat}}")
+s.markdown('</div>', unsafe_allow_html=True)
 
-.rumus-latex 
-    font-size: 13px;
+s.markdown('<div class="rumus-title">3. %RPD (Relative Percent Difference):</div>', unsafe_allow_html=True)
+s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
+s.latex(r"\% \text{RPD} = \frac{|\text{N/M}_1 - \text{N/M}_2|}{\left(\frac{\text{N/M}_1 + \text{N/M}_2}{2}\right)} \times 100")
+s.markdown('</div>', unsafe_allow_html=True)
 }}
 </style>
 
