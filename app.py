@@ -25,7 +25,7 @@ s.markdown(f"""
     background-image: url("data:image/jpg;base64,{bg_image}");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     padding: 2rem;
     border-radius: 25px;
