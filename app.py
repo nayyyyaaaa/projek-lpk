@@ -15,75 +15,70 @@ s.markdown(f"""
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand:wght@400;600&display=swap');
 
     html, body, .stApp {{
-    background: linear-gradient(to bottom right, #fce4ec, #e1f5fe);
-    font-family: 'Comic Neue', 'Quicksand', cursive;
-    color: #590111;
-    background-attachment: fixed;
+        background: linear-gradient(to bottom right, #fce4ec, #e1f5fe);
+        font-family: 'Comic Neue', 'Quicksand', cursive;
+        color: #590111;
+        background-attachment: fixed;
     }}
 
-.block-container {{
-    background-image: url("data:image/jpg;base64,{bg_image}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 2rem;
-    border-radius: 25px;
-    box-shadow: 0 0 20px #f3d1f4;
-    border: 2px dashed #f48fb1;
-}}
+    .block-container {{
+        background-image: url("data:image/jpg;base64,{bg_image}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        padding: 2rem;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #f3d1f4;
+        border: 2px dashed #f48fb1;
+    }}
 
-/* Judul utama */
-.centered-title {{
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
-    color: #82173b;
-    margin-top: 1rem;
-    text-shadow: 1px 1px 2px #db97b0;
-}}
+    .centered-title {{
+        text-align: center;
+        font-size: 34px;
+        font-weight: bold;
+        color: #82173b;
+        margin-top: 1rem;
+        text-shadow: 1px 1px 2px #db97b0;
+    }}
 
-/* Section kecil */
-.cute-section-title {{
-    font-size: 20px;
-    font-weight: 600;
-    color: #590111;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Comic Neue', cursive;
-    background-color: #e89baa;
-    padding: 0.5rem 1rem;
-    border-left: 5px solid #590111;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px #f8bbd07e;
-}}
+    .cute-section-title {{
+        font-size: 20px;
+        font-weight: 600;
+        color: #590111;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: 'Comic Neue', cursive;
+        background-color: #e89baa;
+        padding: 0.5rem 1rem;
+        border-left: 5px solid #590111;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px #f8bbd07e;
+    }}
 
-/* Atom animasi */
-.animated-atom {{
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    width: 100px;
-    z-index: 9999;
-    opacity: 1;
-}}
+    .animated-atom {{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 100px;
+        z-index: 9999;
+        opacity: 1;
+    }}
 
-.rumus-title
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 1rem;
-    color: #590111;
-}}
+    .rumus-title {{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 1rem;
+        color: #590111;
+    }}
 
-.rumus-latex {{
-    font-size: 13px;
-}}
+    .rumus-latex {{
+        font-size: 13px;
+    }}
     </style>
-""", unsafe_allow_html=True)
-</style>
 
-<!-- Icon lucu -->
-<img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
+    <!-- Icon lucu -->
+    <img src="https://media.tenor.com/Z7Z-HChjbnEAAAAi/science-love.gif" class="animated-atom">
 """, unsafe_allow_html=True)
 
 # Judul utama
@@ -220,4 +215,5 @@ s.markdown("""
 - Lailatushifa: 2460406
 - Nailah Inaaya Iswadi: 2460455
 - Rezhika Nur Maryam: 2460496
-- Zhalva Chantika Kumala Putri: 2460547 """)
+- Zhalva Chantika Kumala Putri: 2460547 
+""")
