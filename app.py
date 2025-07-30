@@ -7,7 +7,7 @@ def get_base64(file_path):
     return base64.b64encode(data).decode()
 
 # ubah sesuai nama file gambarmu
-bg_image = get_base64("lpk.jpg")
+bg_image = get_base64("Tabung Percobaan Uji Kimia.jpeg")
 
 # CSS & Gaya Imut Kimia
 s.markdown(f"""
