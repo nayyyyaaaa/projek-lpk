@@ -64,17 +64,7 @@ s.markdown(f"""
         z-index: 9999;
         opacity: 1;
     }}
-
-    .rumus-title {{
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 1rem;
-        color: #590111;
-    }}
-
-    .rumus-latex {{
-        font-size: 13px;
-    }}
+    
     </style>
 
     <!-- Icon lucu -->
