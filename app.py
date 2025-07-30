@@ -51,7 +51,7 @@ s.markdown(f"""
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Comic Neue', cursive;
-    background-color: #fce4ec;
+    background-color: #eb677f;
     padding: 0.5rem 1rem;
     border-left: 5px solid #590111;
     border-radius: 10px;
