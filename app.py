@@ -62,9 +62,9 @@ s.markdown(f"""
 .stTextInput > div > input,
 .stNumberInput input,
 .stTextArea textarea {{
-    background-color: #f5b0d3;
-    color: #f5b0d3;
-    border: 2px dashed #f5b0d3;
+    background-color: #420223;
+    color: #420223;
+    border: 2px dashed #420223;
     border-radius: 15px;
     font-family: 'Comic Neue', cursive;
     padding: 0.4rem;
