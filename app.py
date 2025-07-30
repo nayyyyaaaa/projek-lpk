@@ -23,7 +23,7 @@ s.markdown(f"""
 
 .block-container {{
     background-image: url("data:image/jpg;base64,{bg_image}");
-    background-size: 800 x200 ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center bottom;
