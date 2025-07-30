@@ -75,7 +75,7 @@ s.markdown(f"""
 """, unsafe_allow_html=True)
 
 # Judul utama
-s.markdown('<div class="centered-title">Aplikasi Web Perhitungan Konsentrasi Normalitas, %Kadar, dan %RPD</div>', unsafe_allow_html=True)
+s.markdown('<div class="centered-title">Aplikasi Web Perhitungan Konsentrasi, %Kadar, dan %RPD</div>', unsafe_allow_html=True)
 
 # Fungsi Perhitungan
 # ----------------------------
