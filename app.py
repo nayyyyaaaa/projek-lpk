@@ -67,6 +67,19 @@ s.markdown(f"""
     z-index: 9999;
     opacity: 1;
 }}
+
+.rumus-title
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #590111;
+}}
+
+.rumus-latex {{
+    font-size: 13px;
+}}
+    </style>
+""", unsafe_allow_html=True)
 </style>
 
 <!-- Icon lucu -->
@@ -111,21 +124,14 @@ hingga reaksi selesai, yang ditandai dengan perubahan warna indikator.
 s.markdown("#### 📘 Rumus Titrasi", unsafe_allow_html=True)
 s.markdown("###### pada web aplikasi ini rumus yang diaplikasikan adalah:")
 
-# RUMUS
-s.markdown('<div class="rumus-title">1. Normalitas/Molaritas (N/M):</div>', unsafe_allow_html=True)
-s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
-s.latex(r"N/M = \frac{\text{bobot titrat(mg)}}{\text{FP} \times \text{volume titran(mL)} \times \text{BE/BM}}")
-s.markdown('</div>', unsafe_allow_html=True)
+s.markdown("1. Normalitas/Molaritas (N/M):")
+s.latex(r"N/M = \frac{\text{bobot titrat(mg)}}{\text{faktor pengencer/pengali(FP)} \times \text{volume titran(mL)}\times \text{bobot ekivalen/bobot molekul(BE/BM)}}")
 
-s.markdown('<div class="rumus-title">2. Kadar (%):</div>', unsafe_allow_html=True)
-s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
-s.latex(r"\% \text{kadar} = \frac{N/M \times \text{volume titran} \times \text{BE/BM} \times 0.1 \times \text{FP}}{\text{volume titrat}}")
-s.markdown('</div>', unsafe_allow_html=True)
+s.markdown("2. Kadar (%):")
+s.latex(r"\% \text{kadar} = \frac{{N/M} \times \text{volume titran(mL)} \times \text{bobot ekivalen/bobot molekul(BE/BM)} \times 0.1 \times \text{faktor pengencer/pengali(FP)}} {\text{volume titrat(mL)}}")
 
-s.markdown('<div class="rumus-title">3. %RPD (Relative Percent Difference):</div>', unsafe_allow_html=True)
-s.markdown('<div class="rumus-latex">', unsafe_allow_html=True)
-s.latex(r"\% \text{RPD} = \frac{|\text{N/M}_1 - \text{N/M}_2|}{\left(\frac{\text{N/M}_1 + \text{N/M}_2}{2}\right)} \times 100")
-s.markdown('</div>', unsafe_allow_html=True)
+s.markdown("3. %RPD (Relative Percent Difference):")  
+s.latex(r"\% \text{RPD} = \frac{| \text{konsentrasi awal(N/M)}_1 - \text{konsentrasi duplo(N/M)}_2|} {\left(\frac{\text{N/M}_1 + \text{N/M}_2} {2}\right)} \times 100")
  
 s.markdown("#### 🧬 Background Aplikasi", unsafe_allow_html=True)
 s.markdown("""
