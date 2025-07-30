@@ -17,7 +17,7 @@ s.markdown(f"""
     html, body, .stApp {{
     background: linear-gradient(to bottom right, #fce4ec, #e1f5fe);
     font-family: 'Comic Neue', 'Quicksand', cursive;
-    color: #6a1b9a;
+    color: #30050f;
     background-attachment: fixed;
     }}
 
