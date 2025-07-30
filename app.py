@@ -25,7 +25,7 @@ s.markdown(f"""
     background-image: url("data:image/jpg;base64,{bg_image}");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     padding: 2rem;
     border-radius: 25px;
@@ -38,9 +38,9 @@ s.markdown(f"""
     text-align: center;
     font-size: 34px;
     font-weight: bold;
-    color: #ec407a;
+    color: #82173b;
     margin-top: 1rem;
-    text-shadow: 1px 1px 2px #f8bbd0;
+    text-shadow: 1px 1px 2px #db97b0;
 }}
 
 /* Section kecil */
