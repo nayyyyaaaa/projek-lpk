@@ -47,7 +47,7 @@ s.markdown(f"""
 .cute-section-title {{
     font-size: 20px;
     font-weight: 600;
-    color: #82173b;
+    color: #590111;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Comic Neue', cursive;
