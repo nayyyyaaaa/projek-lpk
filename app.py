@@ -135,7 +135,7 @@ s.markdown('<div class="cute-section-title">Perhitungan Konsentrasi Normalitas/M
 bobot_titrat_mg = s.text_input("Bobot Titrat (mg)", key="bobot_titrat_mg")
 faktor_pengali = s.text_input("Faktor pengali", key="faktor_pengali")
 volume_titran = s.text_input("Volume titran (mL)", key="volume_titran")
-bobot_molekul_titrat = s.text_input("BE/BM (g/grek(mol))", key="BE")
+bobot_molekul_titrat = s.text_input("BE/BM (g/grek);(g/mol)", key="BE")
 
 try:
      # Ganti koma ke titik agar bisa dibaca sebagai sebagai float
@@ -156,9 +156,9 @@ except:
 # ----------------------------
 s.markdown('<div class="cute-section-title">Perhitungan %Kadar</div>', unsafe_allow_html=True)
 
-konsentrasi_input = s.text_input("Konsentrasi (N)", key="kons_n_manual")
+konsentrasi_input = s.text_input("Konsentrasi (N);(M)", key="kons_n_manual")
 volume_titran_kadar = s.text_input("Volume titran (mL)", key="vol_titran_kadar")
-bobot_molekul_titrat_kadar = s.text_input("BE/BM (g/grek(mol))", key="BE_kadar")
+bobot_molekul_titrat_kadar = s.text_input("BE/BM (g/grek);(g/mol)", key="BE_kadar")
 faktor_pengali_kadar = s.text_input("Faktor pengali", key="faktor_pengali_kadar")
 volume_titrat_kadar = s.text_input("Volume titrat (mL)", key="vol_titrat_kadar")
 
