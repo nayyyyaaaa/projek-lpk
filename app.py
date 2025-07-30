@@ -130,7 +130,7 @@ s.markdown("#### 🧮 Kalkulator titrasi", unsafe_allow_html=True)
 # ----------------------------
 # PERHITUNGAN KONSENTRASI
 # ----------------------------
-s.markdown('<div class="cute-section-title">Perhitungan Konsentrasi Normalitas</div>', unsafe_allow_html=True)
+s.markdown('<div class="cute-section-title">Perhitungan Konsentrasi Normalitas/Molaritas</div>', unsafe_allow_html=True)
 
 bobot_titrat_mg = s.text_input("Bobot Titrat (mg)", key="bobot_titrat_mg")
 faktor_pengali = s.text_input("Faktor pengali", key="faktor_pengali")
