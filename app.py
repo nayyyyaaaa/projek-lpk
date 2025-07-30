@@ -116,7 +116,7 @@ s.markdown("1. Normalitas (N):")
 s.latex(r"N = \frac{\text{bobot titrat(mg)}}{\text{faktor pengencer/pengali(FP)} \times \text{volume titran(mL)}\times \text{bobot ekivalen(BE)}}")
 
 s.markdown("2. Kadar (%):")
-s.latex(r"\% \text{kadar} = \frac{konsetrasi(N/M) \times \text{volume titran(mL)} \times \text{bobot ekivalen(BE)} \times 0.1 \times \text{faktor pengencer/pengali(FP)}} {\text{volume titrat(mL)}}")
+s.latex(r"\% \text{kadar} = \frac{konsentrasi(N/M) \times \text{volume titran(mL)} \times \text{bobot ekivalen(BE)} \times 0.1 \times \text{faktor pengencer/pengali(FP)}} {\text{volume titrat(mL)}}")
 
 s.markdown("3. %RPD (Relative Percent Difference):")  
 s.latex(r"\% \text{RPD} = \frac{| \text{konsentrasi awal(N1)} - \text{konsentrasi duplo(N2)}|} {\left(\frac{\text{N}_1 + \text{N}_2} {2}\right)} \times 100")
@@ -154,7 +154,7 @@ except:
 # ----------------------------
 # PERHITUNGAN KADAR
 # ----------------------------
-s.markdown('<div class="cute-section-title">Perhitungan Kadar</div>', unsafe_allow_html=True)
+s.markdown('<div class="cute-section-title">Perhitungan %Kadar</div>', unsafe_allow_html=True)
 
 konsentrasi_input = s.text_input("Konsentrasi (N)", key="kons_n_manual")
 volume_titran_kadar = s.text_input("Volume titran (mL)", key="vol_titran_kadar")
