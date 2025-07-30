@@ -27,7 +27,7 @@ s.markdown(f"""
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center bottom;
-    background-color: rgba(255, 255, 255, 0.6);  /* ini transparan */
+    background-color: rgba(255, 255, 255, 0.1);  /* ini transparan */
     padding: 2rem;
     border-radius: 30px;
     box-shadow: 0 0 20px #f3d1f4;
