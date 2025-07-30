@@ -58,31 +58,8 @@ s.markdown(f"""
     box-shadow: 0 2px 4px #f8bbd07e;
 }}
 
-/* Input */
-.stTextInput > div > input,
-.stNumberInput input,
-.stTextArea textarea {{
-    background-color: #420223;
-    color: #420223;
-    border: 2px dashed #420223;
-    border-radius: 15px;
-    font-family: 'Comic Neue', cursive;
-    padding: 0.4rem;
-}}
-
-/* Tombol */
-.stButton button {{
-    background-color: #f48fb1;
-    color: #f0c7d5;
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
-    transition: all 0.3s ease;
-}}
 .stButton button:hover {{
-    background-color: #ec407a;
+    background-color: #a63a5f;
 }}
 
 /* Scrollbar pastel */
