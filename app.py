@@ -42,7 +42,7 @@ s.markdown(f"""
     .main .block-container {{
         margin: 2rem auto;
         max-width: 480px;  /* Lebih ramping */
-        background-color: rgba(255, 255, 255, 0.55);  /* Lebih transparan */
+        background-color: rgba(255, 255, 255, 0.25);  /* Lebih transparan */
         padding: 1.2rem;  /* Lebih kecil */
         border-radius: 18px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
