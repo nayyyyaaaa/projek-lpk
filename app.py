@@ -111,7 +111,7 @@ s.markdown(f"""
 .footer-text {{
     font-family: 'Comic Neue', cursive;
     font-size: 0.9rem;
-    color: #ba68c8;
+    color: #4f065c;
     font-style: italic;
     line-height: 1.4;
     margin-top: 1.5rem;
