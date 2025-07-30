@@ -32,6 +32,13 @@ s.markdown(f"""
     border-radius: 30px;
     box-shadow: 0 0 20px #f3d1f4;
     border: 2px dashed #f48fb1;
+    html, body, .stApp 
+{
+    background: linear-gradient(to bottom right, #fce4ecaa, #e1f5feaa); /* dengan transparansi */
+    font-family: 'Comic Neue', 'Quicksand', cursive;
+    color: #6a1b9a;
+    background-attachment: fixed;
+}
 }}
 
 /* Judul utama */
