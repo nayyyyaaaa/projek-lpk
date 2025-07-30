@@ -104,7 +104,7 @@ s.markdown(f"""
     right: 15px;
     width: 100px;
     z-index: 9999;
-    opacity: 0.9;
+    opacity: 1;
 }}
 
 /* Footer */
