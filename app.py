@@ -19,8 +19,8 @@ s.markdown(f"""
         background-image: url("data:image/jpg;base64,{bg_image}");
         background-size: contain; /* biar gak zoom, sesuai ukuran asli */
         background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+        background-position: center top;
+        background-attachment: scroll;
         font-family: 'Comic Neue', 'Quicksand', cursive;
         color: #6a1b9a;
     }}
