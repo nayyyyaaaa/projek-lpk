@@ -58,22 +58,6 @@ s.markdown(f"""
     box-shadow: 0 2px 4px #f8bbd07e;
 }}
 
-.stButton button:hover {{
-    background-color: #a63a5f;
-}}
-
-/* Scrollbar pastel */
-::-webkit-scrollbar {{
-    width: 8px;
-}}
-::-webkit-scrollbar-track {{
-    background: #f5bcd0;
-}}
-::-webkit-scrollbar-thumb {{
-    background: #f8bbd0;
-    border-radius: 10px;
-}}
-
 /* Atom animasi */
 .animated-atom {{
     position: fixed;
@@ -82,16 +66,7 @@ s.markdown(f"""
     width: 100px;
     z-index: 9999;
     opacity: 1;
-}}
 
-/* Footer */
-.footer-text {{
-    font-family: 'Comic Neue', cursive;
-    font-size: 0.9rem;
-    color: #0c1314;
-    font-style: italic;
-    line-height: 1.4;
-    margin-top: 1.5rem;
 }}
 </style>
 
