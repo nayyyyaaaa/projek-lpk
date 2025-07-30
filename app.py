@@ -33,6 +33,21 @@ s.markdown(f"""
     border: 2px dashed #f48fb1;
 }}
 
+    /* Sidebar & header transparan */
+    [data-testid="stSidebar"], [data-testid="stHeader"] {{
+        background-color: rgba(255, 255, 255, 0.0);
+    }}
+
+    /* Konten di tengah, lebih kecil & transparan */
+    .main .block-container {{
+        margin: 2rem auto;
+        max-width: 480px;  /* Lebih ramping */
+        background-color: rgba(255, 255, 255, 0.55);  /* Lebih transparan */
+        padding: 1.2rem;  /* Lebih kecil */
+        border-radius: 18px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+
 /* Judul utama */
 .centered-title {{
     text-align: center;
