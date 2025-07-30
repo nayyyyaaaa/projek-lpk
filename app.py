@@ -67,7 +67,7 @@ s.markdown(f"""
     width: 8px;
 }}
 ::-webkit-scrollbar-track {{
-    background: #ffeef4;
+    background: #f5bcd0;
 }}
 ::-webkit-scrollbar-thumb {{
     background: #f8bbd0;
