@@ -64,7 +64,7 @@ s.markdown(f"""
 .stTextArea textarea {{
     background-color: #f5b0d3;
     color: #f5b0d3;
-    border: 2px dashed #f48fb1;
+    border: 2px dashed #f5b0d3;
     border-radius: 15px;
     font-family: 'Comic Neue', cursive;
     padding: 0.4rem;
