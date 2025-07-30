@@ -73,7 +73,7 @@ s.markdown(f"""
 /* Tombol */
 .stButton button {{
     background-color: #f48fb1;
-    color: white;
+    color: #f0c7d5;
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
     border-radius: 20px;
